@@ -125,11 +125,28 @@ public class DevoirController implements Initializable {
 
     // Exercice n°2
     @FXML
-    public void btnDessinerClicked(Event event)
-    {
-        // A vous de jouer
+    public void btnDessinerClicked(Event event){
 
-    }
+
+        txtTriangle.setText("");
+
+            // 1er triangle
+            for(int i = 1 ; i <= sldNbLignes.getValue() ; i++)
+            {
+                for(int j = 1 ; j <= sldNbLignes.getValue() - i  ; j++)
+                {
+                    txtTriangle.setText(txtTriangle.getText() + " ");
+                }
+                for(int k = 1 ; k <= 2 * i - 1 ; k++)
+                {
+                    txtTriangle.setText(txtTriangle.getText() + "1 2 3 4 5 6 7 8 9");
+                }
+                txtTriangle.setText(txtTriangle.getText()+"\n");
+            }
+
+
+        }
+
 
     // Exercice n°3
     @FXML
